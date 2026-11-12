@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Escuela de Educación Secundaria Técnica N° 2 de Lanús">
+
+    <title>EEST N° 2 Lanús</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="header">
+
+        <div class="contenedor header-contenido">
+
+            <a href="#inicio" class="logo">
+                <div class="logo-imagen">
+                    <img src="data:image/jpeg;base64,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" alt="Logo EEST N° 2">
+                </div>
+
+                <div class="logo-texto">
+                    <span>ESCUELA DE EDUCACIÓN</span>
+                    <strong>SECUNDARIA TÉCNICA N° 2</strong>
+                    <span>LANÚS</span>
+                </div>
+            </a>
+
+
+            <!-- Botón para menú responsive -->
+
+            <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
+                ☰
+            </button>
+
+
+            <!-- Navegación -->
+
+            <nav class="nav" id="nav">
+
+                <a href="#inicio">Inicio</a>
+
+                <a href="#institucional">Institucional</a>
+
+                <a href="#alumnos">Alumnos</a>
+
+                <a href="#docentes">Docentes</a>
+
+                <a href="#carreras">Carreras</a>
+
+                <a href="#novedades">Novedades</a>
+
+                <a href="#contacto">Contacto</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =========================
+             INICIO / HERO
+        ========================== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="contenedor hero-contenido">
+
+                <p class="hero-superior">
+                    ESCUELA DE EDUCACIÓN SECUNDARIA TÉCNICA
+                </p>
+
+                <h1>
+                    EEST N° 2
+                </h1>
+
+                <h2>
+                    Educación técnica pública en Lanús
+                </h2>
+
+                <div class="hero-botones">
+
+                    <a href="#institucional" class="boton boton-principal">
+                        Conocé nuestra escuela
+                    </a>
+
+                    <a href="#contacto" class="boton boton-secundario">
+                        Contacto
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ACCESOS RÁPIDOS
+        ========================== -->
+
+        <section class="accesos">
+
+            <div class="contenedor">
+
+                <div class="accesos-grid">
+
+                    <a href="#carreras" class="acceso">
+
+                        <div class="acceso-icono">
+                            ⚙️
+                        </div>
+
+                        <div>
+                            <h3>Especialidades</h3>
+
+                            <p>
+                                Conocé nuestras orientaciones técnicas.
+                            </p>
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="#contacto" class="acceso">
+
+                        <div class="acceso-icono">
+                            📍
+                        </div>
+
+                        <div>
+                            <h3>Contacto</h3>
+
+                            <p>
+                                Datos institucionales.
+                            </p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INSTITUCIONAL
+        ========================== -->
+
+        <section id="institucional" class="seccion institucional">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span>CONOCÉ NUESTRA ESCUELA</span>
+
+                    <h2>
+                        Institucional
+                    </h2>
+
+                    <div class="linea"></div>
+
+                </div>
+
+
+                <div class="institucional-grid">
+
+
+                    <div class="institucional-texto">
+
+                        <p>
+                            La Escuela de Educación Secundaria Técnica N° 2
+                            de Lanús es una institución de educación técnica
+                            orientada a la formación integral de sus estudiantes.
+                        </p>
+
+                        <p>
+                            Nuestra propuesta educativa combina una formación
+                            general con conocimientos científicos, tecnológicos
+                            y técnicos.
+                        </p>
+
+                        <p>
+                            A través de diferentes espacios curriculares y
+                            especialidades, buscamos brindar a nuestros alumnos
+                            herramientas para continuar sus estudios y
+                            desarrollarse profesionalmente.
+                        </p>
+
+                        <a href="#contacto" class="boton boton-principal">
+                            Más información
+                        </a>
+
+                    </div>
+
+
+                    <div class="institucional-imagen">
+
+                        <!-- Reemplazar por una foto real de la escuela -->
+
+                        <img src="img/escuela.png" alt="Edificio de la EEST N° 2 de Lanús">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             NIVELES / CICLOS
+        ========================== -->
+
+        <section class="seccion ciclos">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion titulo-centro">
+
+                    <span>PROPUESTA EDUCATIVA</span>
+
+                    <h2>
+                        Ciclos de formación
+                    </h2>
+
+                    <div class="linea"></div>
+
+                </div>
+
+
+                <div class="cards-grid">
+
+
+                    <article class="card">
+
+                        <div class="card-numero">
+                            01
+                        </div>
+
+                        <div class="card-contenido">
+
+                            <h3>
+                                Ciclo Básico
+                            </h3>
+
+                            <p>
+                                Formación inicial de la educación secundaria
+                                técnica, con una base común para los estudiantes.
+                            </p>
+
+                            <a href="#carreras">
+                                Ver información →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="card">
+
+                        <div class="card-numero">
+                            02
+                        </div>
+
+                        <div class="card-contenido">
+
+                            <h3>
+                                Ciclo Superior
+                            </h3>
+
+                            <p>
+                                Formación especializada que permite profundizar
+                                los conocimientos técnicos y profesionales.
+                            </p>
+
+                            <a href="#carreras">
+                                Ver información →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="card">
+
+                        <div class="card-numero">
+                            03
+                        </div>
+
+                        <div class="card-contenido">
+
+                            <h3>
+                                Formación Técnica
+                            </h3>
+
+                            <p>
+                                Desarrollo de conocimientos científicos,
+                                tecnológicos y técnicos aplicados.
+                            </p>
+
+                            <a href="#carreras">
+                                Ver información →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             CARRERAS
+        ========================== -->
+
+        <section id="carreras" class="seccion carreras">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion titulo-centro">
+
+                    <span>FORMACIÓN TÉCNICA</span>
+
+                    <h2>
+                        Especialidades
+                    </h2>
+
+                    <div class="linea"></div>
+
+                    <p class="subtitulo">
+                        Conocé las propuestas de formación de nuestra escuela.
+                    </p>
+
+                </div>
+
+
+                <div class="especialidades-grid">
+
+
+                    <article class="especialidad">
+
+                        <div class="especialidad-icono">
+                            💻
+                        </div>
+
+                        <h3>
+                            Informática
+                        </h3>
+
+                        <p>
+                            Formación vinculada al área de informática,
+                            tecnología y sistemas.
+                        </p>
+
+                        <a href="#">
+                            Conocer más →
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="especialidad">
+
+                        <div class="especialidad-icono">
+                            👨‍💻
+                        </div>
+
+                        <h3>
+                            Programación
+                        </h3>
+
+                        <p>
+                            Formación relacionada con programación y
+                            desarrollo de soluciones informáticas.
+                        </p>
+
+                        <a href="#">
+                            Conocer más →
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="especialidad">
+
+                        <div class="especialidad-icono">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Formación técnica
+                        </h3>
+
+                        <p>
+                            Más información acá.
+                            (Próximamente)
+                        </p>
+
+                        <a href="#">
+                            Conocer más →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             NOVEDADES
+        ========================== -->
+
+        <section id="novedades" class="seccion novedades">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span>ACTUALIDAD</span>
+
+                    <h2>
+                        Últimas novedades
+                    </h2>
+
+                    <div class="linea"></div>
+
+                </div>
+
+
+                <div class="noticias-grid">
+
+
+                    <article class="noticia">
+
+                        <div class="noticia-imagen">
+
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCbMb4ZLwlpx7fxxlk3RylOhTy8-F0v4QsHhPXLrSPsA&s=10" alt="Novedad institucional">
+
+                        </div>
+
+                        <div class="noticia-contenido">
+
+                            <span class="noticia-fecha">
+                                INSTITUCIONAL
+                            </span>
+
+                            <h3>
+                                Aniversario
+                            </h3>
+
+                            <p>
+                                La escuela celebra cada año su aniversario con una expotécnica.
+                            </p>
+
+                            <a href="#">
+                                Leer más →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="noticia">
+
+                        <div class="noticia-imagen">
+
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4LGoMPtLH-2EWv9TyNs1nFZEShF4DQ1ESvNrKtTZYHg&s=10" alt="Actividad escolar">
+
+                        </div>
+
+                        <div class="noticia-contenido">
+
+                            <span class="noticia-fecha">
+                                ACTIVIDADES
+                            </span>
+
+                            <h3>
+                                Actividades escolares
+                            </h3>
+
+                            <p>
+                                Información sobre actividades,
+                                proyectos y acontecimientos institucionales.
+                            </p>
+
+                            <a href="#">
+                                Leer más →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="noticia">
+
+                        <div class="noticia-imagen">
+
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2gEDKTEuFnVyl_T2BsNtkJ82EazwOHoHEz-aYAKxqtQ&s=10" alt="Información para alumnos">
+
+                        </div>
+
+                        <div class="noticia-contenido">
+
+                            <span class="noticia-fecha">
+                                ALUMNOS
+                            </span>
+
+                            <h3>
+                                Información para estudiantes
+                            </h3>
+
+                            <p>
+                                Comunicados y novedades importantes para
+                                los alumnos de la institución.
+                            </p>
+
+                            <a href="#">
+                                Leer más →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             GALERÍA
+        ========================== -->
+
+        <section class="seccion galeria">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion titulo-centro">
+
+                    <span>CONOCÉ NUESTRA INSTITUCIÓN</span>
+
+                    <h2>
+                        Galería
+                    </h2>
+
+                    <div class="linea"></div>
+
+                </div>
+
+
+                <div class="galeria-grid">
+
+                    <img src="img/Recreo.jpg" alt="Escuela">
+
+                    <img src="img/Pasillo4.jpg"Instalaciones">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEanyUlrttVqo4FxNMDGqAlpCDrFYfTdiShEI5SChpUA&s" alt="Actividad escolar">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQCCZjBryLdP3zk6JbjPqwcBFFJ0R1xO1cd-2V6zYXQQ&s=10" alt="Actividad de la escuela">
+
+                    <img src="img/Biblioteca.jpg" alt="Instalaciones de la escuela">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkzHZBadm2HzM4zz-ZmQS4H-Tta06e8XpbKfjBPYC0w&s=10" alt="Comunidad educativa">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACTO
+        ========================== -->
+
+        <section id="contacto" class="seccion contacto">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion titulo-centro">
+
+                    <span>ESTAMOS PARA AYUDARTE</span>
+
+                    <h2>
+                        Contacto
+                    </h2>
+
+                    <div class="linea"></div>
+
+                </div>
+
+
+                <div class="contacto-grid">
+
+
+                    <div class="contacto-info">
+
+                        <div class="contacto-item">
+
+                            <div class="contacto-icono">
+                                📍
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Dirección
+                                </h3>
+
+                                <p>
+                                    Lanús, Buenos Aires, Argentina
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contacto-item">
+
+                            <div class="contacto-icono">
+                                ☎️
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Teléfono
+                                </h3>
+
+                                <p>
+                                    Próximamente...
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contacto-item">
+
+                            <div class="contacto-icono">
+                                ✉️
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Correo electrónico
+                                </h3>
+
+                                <p>
+                                    Próximamente...
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="contacto-mapa">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.317756061151!2d-58.41236472425674!3d-34.6719289729299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc84698822eb%3A0xbf830c7afcaf390f!2sEEST%20N%202%20%22Dr.%20Valent%C3%ADn%20Alsina%22!5e0!3m2!1ses-419!2sar!4v1786142622564!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" width="100%"
+                            height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="contenedor footer-grid">
+
+
+            <div class="footer-institucion">
+
+                <h3>
+                    EEST N° 2
+                </h3>
+
+                <p>
+                    Escuela de Educación Secundaria Técnica N° 2
+                    de Lanús.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-enlaces">
+
+                <h3>
+                    Enlaces
+                </h3>
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="#institucional">
+                    Institucional
+                </a>
+
+                <a href="#alumnos">
+                    Alumnos
+                </a>
+
+                <a href="#docentes">
+                    Docentes
+                </a>
+
+                <a href="#carreras">
+                    Especialidades
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-contacto">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    📍 Lanús, Buenos Aires
+                </p>
+
+                <p>
+                    🇦🇷 Argentina
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="contenedor">
+
+                <p>
+                    © 2026 EEST N° 2 de Lanús. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
